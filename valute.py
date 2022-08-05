@@ -15,7 +15,7 @@ class ValitesMod(loader.Module):
 	async def valutecmd(self, message):
 		""".valute <Valute char code (optional)>"""
 		valutes = get("https://cdn.cur.su/api/nbu.json").json()
-		names = valutes["Valute"].keys()
+		names = valutes["rates"].keys()
 		args = utils.get_args(message)
 		req = []
 		
