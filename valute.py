@@ -14,7 +14,7 @@ class ValitesMod(loader.Module):
 	@loader.unrestricted
 	async def valutecmd(self, message):
 		""".valute <Valute char code (optional)>"""
-		valutes = get("https://www.cbr-xml-daily.ru/daily_json.js").json()
+		valutes = get("https://cdn.cur.su/api/nbu.json").json()
 		names = valutes["Valute"].keys()
 		args = utils.get_args(message)
 		req = []
